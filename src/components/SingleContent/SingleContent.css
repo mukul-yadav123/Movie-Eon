@@ -6,9 +6,14 @@
     padding: 5px;
     margin: 5px 0;
     background-color: #282c34;
+    cursor: pointer;
     border-radius: 10px;
     position: relative;
     font-family: "Montserrat",sans-serif;
+}
+.title{
+    /* text-overflow: ellipsis; */
+    overflow: none;
 }
 .media:hover{
     background-color: white;
@@ -16,8 +21,9 @@
 }
 @media (max-width: 550px) {
     .media{
-        width: 46%;
-    }
+        width: 80%;
+        left: 8%;
+  }
 }
 .poster{
     border-radius: 10px;

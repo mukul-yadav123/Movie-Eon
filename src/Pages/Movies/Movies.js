@@ -4,6 +4,7 @@ import SingleContent from '../../components/SingleContent/SingleContent';
 import CustomPagination from '../../components/Pagination/CustomPagination';
 import Genres from '../../components/Genres';
 import useGenres from '../../Hooks/useGenre';
+import Loader from '../../components/Loader';
 
 
 
@@ -29,6 +30,8 @@ const Movies = () => {
     window.scroll(0,0);
     fetchMovies();
   },[page,genreforUrl]);
+
+  if(content.length == 0) return <Loader/>;
 
   return (
     <div>

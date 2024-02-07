@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './Trending.css'
 import SingleContent from '../../components/SingleContent/SingleContent';
 import CustomPagination from '../../components/Pagination/CustomPagination';
+import Loader from '../../components/Loader';
 
 
 const Trending = () => {
@@ -20,6 +21,8 @@ const Trending = () => {
 useEffect(() => {
   fetchTrending();
 },[page]);
+
+if(content.length == 0) return <Loader/>;
 
   return (
     <div>

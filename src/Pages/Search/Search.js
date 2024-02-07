@@ -37,7 +37,7 @@ const Search = () => {
     fetchSearch();
   },[type,page])
 
-
+  if(!content) return 'Loading..';
 
   return (
     <div>

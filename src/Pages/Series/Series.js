@@ -28,6 +28,7 @@ const Series = () => {
     fetchMovies();
   },[page,genreforUrl])
 
+  if(content.length == 0) return 'Loading';
 
   return (
     <div>

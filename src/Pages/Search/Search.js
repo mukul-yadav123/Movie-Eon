@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 import SingleContent from '../../components/SingleContent/SingleContent';
 import CustomPagination from '../../components/Pagination/CustomPagination';
+import Loader from '../../components/Loader';
 
 const darkTheme = createTheme({
   palette: {
@@ -37,7 +38,7 @@ const Search = () => {
     fetchSearch();
   },[type,page])
 
-  if(!content) return 'Loading..';
+  if(!content) return <Loader/>;
 
   return (
     <div>

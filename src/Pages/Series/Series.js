@@ -4,6 +4,7 @@ import useGenres from '../../Hooks/useGenre';
 import Genres from '../../components/Genres';
 import SingleContent from '../../components/SingleContent/SingleContent';
 import CustomPagination from '../../components/Pagination/CustomPagination';
+import Loader from '../../components/Loader';
 
 const Series = () => {
 
@@ -28,7 +29,7 @@ const Series = () => {
     fetchMovies();
   },[page,genreforUrl])
 
-  if(content.length == 0) return 'Loading';
+  if(content.length == 0) return <Loader/>;
 
   return (
     <div>
